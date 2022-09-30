@@ -87,7 +87,7 @@ async def on_message(message):
     if message.author == client.user:
         return
     
-    await message.channel.send(random_text)
+    await message.channel.send(f'Hello {message.author}! {random_text}')
 
 DISCORD_TOKEN = os.environ["DISCORD_TOKEN"]
 client.run(DISCORD_TOKEN)
